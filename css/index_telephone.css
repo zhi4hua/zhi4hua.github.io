@@ -1,0 +1,40 @@
+#header #logo {
+    margin: 0;
+    margin-left: 1em;
+    width :20%;
+}
+
+#header #menu ul {
+    width: 100%;
+    margin: 0;
+}
+
+#header #menu ul:nth-child(2) {
+    display: none;
+}
+
+#menu #menu_button {
+    display: block;
+    text-align: right;
+    font-size: 1.5em;
+}
+#header .menu li {
+    /*float: none;*/
+    width: 100%;
+    text-align: center;
+}
+
+#menu li ul {
+    width: 100%;
+    display: none;
+    position: relative;
+}
+
+.content, .content .cell {
+	width: 100%;
+	display: block;
+}
+
+.view_hashtag .imgCell {
+    width: 100%;
+}

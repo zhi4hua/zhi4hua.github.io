@@ -1,0 +1,40 @@
+@font-face {
+	font-family : myProximaNova-Bold;
+	src: url('../fonts/ProximaNova-Bold.otf');
+}
+
+@font-face {
+	font-family: myProximaNova-Light;
+	src: url('../fonts/ProximaNoval-Light.otf');
+}
+
+@font-face {
+	font-family :myProximaNova;
+	src: url('../fonts/ProximaNoval-light');
+}
+
+/* 自适应屏幕尺寸，
+ * ---------------
+ * 如果尺寸在1700px 以下使标签 body 宽度 100%
+ * 大于1700px 时，以原图显示，并使标签居中
+ */
+body {
+	width: 100%;
+}
+
+@media screen and (min-width: 1700px) {
+	body {
+		width: 1700px;
+		margin: 0 auto;
+	}
+}
+
+a, a:link, a:visited {
+	color: white;
+	text-decoration: none;
+	transition: color 0.4s;
+}
+
+a:hover {
+	color: #f84545;
+}

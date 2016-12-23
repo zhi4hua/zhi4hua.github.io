@@ -1,0 +1,299 @@
+#header {
+	width: 100%;
+	height: 895px;
+	margin-top: 0;
+	background-color: #1a1a1a;
+	background-image: url(../images/layer_16.png);
+	background-position: center;
+	background-attachment:fixed;
+	position: relative;
+}
+
+#header #logo {
+	float: left;
+	margin: 41px 0 0 5%;
+	display: inline-block;
+	transition: box-shadow 0.4s;
+	overflow: hidden;
+	/*width: 100%;*/
+	/*height: 90px;*/
+}
+
+#header #logo:hover {
+	/*box-shadow: 0 0 13px white;*/
+	cursor: pointer;
+	/*animation: my_luminescence 1s infinite;*/
+	box-shadow: 0 0 13px white;
+}
+
+#header #logo img {
+	width: 100%;
+	transition: transform 0.4s;
+}
+
+#header #logo img:hover {
+	/*width: 105%;*/
+	transform: scale(1.1);
+}
+
+@keyframes my_luminescence {
+	from { box-shadow: 0 0 0px white; }
+	to { box-shadow: 0 0 13px white; }
+}
+
+#header #menu {
+  font-size: 22.5px;
+  font-family: "Proxima Nova", myProximaNova;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+#header .menu > ul {
+	list-style: none;
+	margin: 78.25px 0 0 0;
+	padding: 0;
+	float: right;
+}
+
+#header .menu li {
+	margin: 0;
+	float: left;
+	/*padding: 0 37px 15px 37px;*/
+	padding: 5px 37px;
+	position: relative;
+}
+
+#header .menu li:hover {
+	cursor: pointer;
+	outline: 1px #DDDDDD solid;
+	/*box-shadow: 0 0 5px white inset;*/
+}
+
+#header .menu a {
+	color: white;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+#header .menu li a {
+	transition: color 0.4s;
+}
+
+#header .menu li a:hover, #header .menu li:hover > a {
+	color: #f84545;
+	cursor: pointer;
+	text-shadow: 0 0 15px white,
+				 0 0 45px white;
+	/*animation: white_light 0.9 infinite alternate;*/
+}
+
+#menu #menu_button {
+	display: none;
+}
+
+#menu li ul {
+	position: absolute;
+	left: 0;
+	padding: 0;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	transition: height 0.4s;
+}
+
+/* 鼠标经过时显示二级菜单 */
+#menu li:hover ul {
+	outline: 1px solid white;
+	height: auto;
+}
+
+#menu li li {
+	list-style: none;
+	background-color: gray;
+	margin: 0 6px;
+	width: 100%;
+	text-align: center;
+	outline: 1px white solid;
+	display: inline-block;
+}
+
+#menu li li:hover {
+	background-color: #DDDDDD;
+	outline: 1px solid #DDDDDD;
+	box-shadow: 0 0 15px gray inset ;
+}
+
+#header #menu li li a {
+	transition: font-size 0.4s;
+}
+
+#header #menu li li:hover > a {
+	font-size: 110%;
+	text-shadow: 0 0 5px gray;
+	color: #f84545;
+}
+
+#header #text {
+	position: absolute;
+	color: white;
+	text-align: center;
+	width: 100%;
+	top: 448.917px;
+}
+
+#header #text h1 {
+	font-family: "Proxima Nova Light", myProximaNova-light;
+	font-size: 60px;
+	letter-spacing: 28px;
+}
+
+#header #text h2 {
+	font-size: 30px;
+	font-family:"Proxima Nova Bold" , myProximaNova-Bold;
+	color: #f84545;
+	letter-spacing: 18px;
+}
+
+.content  {
+	width: 89%;
+	margin: 83px auto 0 auto;
+	position: relative;
+	margin-bottom: 10em;
+}
+
+.content .cell {
+	width: 57.7%;
+	position: relative;
+	overflow: hidden;
+	transition: box-shadow 0.4s;
+	float: left;
+}
+
+.content .cell:hover {
+	box-shadow: 0 0 15px gray;
+}
+
+.content .cell a > img {
+	width: 100%;
+	transition: transform 0.4s;
+}
+
+.content .cell:hover a > img {
+	transform: scale(1.1);
+}
+
+#content .cell .description {
+	text-align: left;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	padding-left: 32px;
+	text-align: both;
+}
+
+.cell .description > img {
+	width: 16.4%;
+}
+
+.cell .description > h3 {
+	font-size: 60px;
+	letter-spacing: 10px;
+	font-family: "Proxima Nova Light", myProximaNova-light;
+}
+
+.content .small {
+	width: 25.8%;
+	/*float: right;*/
+}
+
+.content .small .description > h3 {
+	font-size: 30px;
+}
+
+.content .downDiv {
+	/*margin-top: 30px;*/
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.content .rack1 {
+}
+
+.content .rack2 {
+	width: 100%;
+	margin-top: 2em;
+}
+
+.rightFlush {
+	float: right !important;
+}
+
+.autoCenterDiv {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content .rack2 .cell .description > img {
+	width: 66.4%;
+}
+
+.content .rack2 .cell .description > img.smallLogo {
+	width: 24.4%;
+}
+
+.leftFlush {
+	float: left !important;
+}
+
+/* view hashtag TAG */
+.view_hashtag {
+	width: 100%;
+	text-align: center;
+	clear: both;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.view_hashtag h1 {
+	font-family: "Proxima Nova Light", myProximaNova-light;
+	font-size: 60px;
+	color: white;
+	width: 100%;
+	position: absolute;
+	top: 310px;
+}
+
+.view_hashtag h2 {
+	font-family: "Proxima Nova Bold", myProximaNova-Bold;
+	font-size: 30px;
+	color: #f84545;
+	width: 100%;
+	position: absolute;
+	top: 376px;
+} 
+
+.view_hashtag .imgCell {
+	width: 25%;
+	float: left;
+	overflow: hidden;
+}
+
+.view_hashtag .imgCell:hover {
+	box-shadow: 0 0 15px red inset;
+}
+
+.view_hashtag .imgCell img {
+	width: 100%;
+	transition: transform 0.7s;
+}
+
+.view_hashtag .imgCell img:hover {
+	transform: scale(0.97);
+}
