@@ -2,7 +2,7 @@ window.onload = init;
 window.onresize = autoDivHeight;
 
 // 定义最小浏览器宽度
-var MIN_WIDTH = 768;
+var MIN_WIDTH = 1000;
 
 function init() {
 	// 设置MIN_WIDTH的值
