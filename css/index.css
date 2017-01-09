@@ -141,7 +141,8 @@
 	color: white;
 	text-align: center;
 	width: 100%;
-	top: 448.917px;
+	/*top: 65%;*/
+	bottom: 10%;
 }
 
 #header #text h1 {
