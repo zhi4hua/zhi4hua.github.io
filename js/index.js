@@ -34,6 +34,8 @@ function init() {
 		}
 	}
 
+	autoDivHeight();
+
 	// 内容区, id = content
 	var contentDiv = document.getElementById('content');
 	if (document.body.offsetWidth > MIN_WIDTH) {
@@ -45,13 +47,14 @@ function init() {
 
 	// 展览器
 	autoDivViewHashtag();
+
 }
 
 function autoDivViewHashtag() {
 	var viewHashtag = document.getElementById('view_hashtag');
 	var imgCellDivs = getDivsIsName('imgCell', viewHashtag);
 	for (var i = 0; i < imgCellDivs.length; ++i) {
-		imgCellDivs[i].style = 'height:' + imgCellDivs[0].offsetWidth + 'px; overflow:hidden;';
+		imgCellDivs[i].style = 'height:' + imgCellDivs[0].offsetWidth + 'px; ';
 	}
 	// viewHashtag.style.height = imgCellDivs[0]
 
@@ -67,16 +70,20 @@ function autoDivViewHashtag() {
 function autoDivHeight() {
 	// 设计高度，将标签div id = header 的height = width * 0.618
 	var headerDiv = document.getElementById('header');
-	headerDiv.style = 'height:' + headerDiv.offsetWidth * 0.618 + 'px';
+	var textDiv = document.getElementById('text');
 
 	var contentDiv = document.getElementById('content');
 	if (document.body.offsetWidth <= MIN_WIDTH) {
+		headerDiv.style = 'height:' + headerDiv.offsetWidth * 0.618 + 'px';
 		smallSetContentDiv(contentDiv);
 		autoMenu();
+		textDiv.style.display = 'none';
 	}
 	else {
 		setContentDiv(contentDiv);
 		unmenu();
+		testDiv.className = null;
+		textDiv.style.display = 'block';
 	}
 
 	autoDivViewHashtag();

@@ -20,7 +20,6 @@
 }
 
 #header #logo:hover {
-	/*box-shadow: 0 0 13px white;*/
 	cursor: pointer;
 	/*animation: my_luminescence 1s infinite;*/
 	box-shadow: 0 0 13px white;
@@ -36,6 +35,10 @@
 	transform: scale(1.1);
 }
 
+.lighting {
+	box-shadow: 0 0 16px white;
+}
+
 @keyframes my_luminescence {
 	from { box-shadow: 0 0 0px white; }
 	to { box-shadow: 0 0 13px white; }
@@ -48,7 +51,6 @@
   position: absolute;
   right: 0;
   top: 0;
-  width: 100%;
 }
 
 #header .menu > ul {
@@ -92,6 +94,11 @@
 
 #menu #menu_button {
 	display: none;
+}
+
+.icon-align-justify:hover, .icon-remove:hover {
+	box-shadow: 0 0 16px white;
+	text-shadow: 0 0 16px white;
 }
 
 #menu li ul {
@@ -143,12 +150,24 @@
 	width: 100%;
 	/*top: 65%;*/
 	bottom: 10%;
+	transition:text-shadow 0.4s;
+}
+
+#text:hover, .select:hover {
+	text-shadow: 0 0 16px white;
+	box-shadow: 0 0 16px white;
 }
 
 #header #text h1 {
 	font-family: "Proxima Nova Light", myProximaNova-light;
 	font-size: 60px;
 	letter-spacing: 28px;
+	z-index: -1;
+}
+
+.small_phone {
+	font-size: 50%;
+	letter-spacing: 50%;
 }
 
 #header #text h2 {
@@ -297,4 +316,8 @@
 
 .view_hashtag .imgCell img:hover {
 	transform: scale(0.97);
+}
+
+.tag {
+	outline: 1px dashed red;
 }
