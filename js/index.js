@@ -82,7 +82,7 @@ function autoDivHeight() {
 	else {
 		setContentDiv(contentDiv);
 		unmenu();
-		testDiv.className = null;
+		textDiv.className = null;
 		textDiv.style.display = 'block';
 	}
 
