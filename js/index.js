@@ -80,6 +80,7 @@ function autoDivHeight() {
 		textDiv.style.display = 'none';
 	}
 	else {
+		headerDiv.style.height = '';
 		setContentDiv(contentDiv);
 		unmenu();
 		textDiv.className = null;
