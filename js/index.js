@@ -20,16 +20,15 @@ function init() {
 	// alert('txt = ' + txt);
 
 	// 设置菜单，添加动画效果
-	var liDivs = document.getElementsByTagName('li');
-	for (var i = 0; i < liDivs.length; ++i) {
-		var lengths = liDivs[i].getElementsByTagName('ul').length;
-		if (lengths > 0) {
-			var ulLiUl = liDivs[i].getElementsByTagName('ul')[0];
-			ulLiUl.parentNode.onmouseover = function() {
-				ulLiUl.style = 'height:' + ulLiUl.getElementsByTagName('li').length * 100 + '%';
+	var lis = document.getElementById('menu').getElementsByTagName('li');
+	for (var i = 0; i < lis.length; ++i) {
+		var subMenu = lis[i].getElementsByTagName('ul');
+		if (subMenu.length > 0 ) {
+			lis[i].onmouseover = function() {
+				this.getElementsByTagName('ul')[0].style.height = this.getElementsByTagName('li').length * 100 + '%';
 			}
-			ulLiUl.parentNode.onmouseout = function() {
-				ulLiUl.style.height = 0;
+			lis[i].onmouseout = function() {
+				this.getElementsByTagName('ul')[0].style.height = 0;
 			}
 		}
 	}
