@@ -17,7 +17,6 @@ function init() {
 	var txt = linkDiv.media;
 	var reg = new RegExp("\d");
 	txt = txt.match(reg);
-	// alert('txt = ' + txt);
 
 	// 设置菜单，添加动画效果
 	var lis = document.getElementById('menu').getElementsByTagName('li');
@@ -55,14 +54,9 @@ function autoDivViewHashtag() {
 	for (var i = 0; i < imgCellDivs.length; ++i) {
 		imgCellDivs[i].style = 'height:' + imgCellDivs[0].offsetWidth + 'px; ';
 	}
-	// viewHashtag.style.height = imgCellDivs[0]
 
 	var h1Label = viewHashtag.getElementsByTagName('h1')[0];
-	// || h1Label.offsetHeight >= viewHashtag.offsetHeight
 
-	/*　这，上次制作到　*/
-	// if (h1Label.offsetWidth < viewHashtag.offsetWidth)
-		// h1Label.style.display = 'none';
 	h1Label.style.top = viewHashtag.offsetHeight / 2.0 - h1Label.offsetHeight + 'px';
 }
 
@@ -97,7 +91,6 @@ function autoMenu() {
 	var logoDiv = document.getElementById('logo');
 
 	menuDivUls[1].style.display = 'none';
-	// alert('menu width = ' + menuDivUls[1].offsetWidth);
 	menuButton.onclick = function() {
 		if (this.className == 'icon-align-justify') {
 			this.className = 'icon-remove';			
@@ -107,7 +100,9 @@ function autoMenu() {
 			this.className = 'icon-align-justify';
 			menuDivUls[1].style.display = 'none';
 		}
-	}
+	};
+	menuButton.onclick();
+	menuButton.onclick();
 }
 
 // 取消响应式菜单
